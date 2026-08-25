@@ -1,0 +1,109 @@
+:root {
+  --bg: #faf9f5;
+  --ink: #2b322e;
+  --ink-soft: #5b645e;
+  --moss: #5e7a62;
+  --moss-soft: #eef2ec;
+  --rule: #e2e0d7;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 20px 80px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang HK", "Noto Sans TC", "Helvetica Neue", sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap { max-width: 720px; margin: 0 auto; }
+
+header.site {
+  padding: 48px 0 8px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 32px;
+}
+
+header.site .app { font-size: 15px; letter-spacing: .04em; color: var(--moss); font-weight: 600; }
+header.site h1 { font-size: 30px; line-height: 1.3; margin: 6px 0 10px; }
+header.site .meta { font-size: 14px; color: var(--ink-soft); margin: 0 0 20px; }
+
+nav.lang { font-size: 14px; margin-bottom: 4px; }
+nav.lang a { color: var(--moss); }
+
+h2 {
+  font-size: 21px;
+  margin: 44px 0 12px;
+  padding-top: 4px;
+}
+
+h3 { font-size: 17px; margin: 28px 0 8px; }
+
+p, li { color: var(--ink); }
+li { margin-bottom: 6px; }
+
+a { color: var(--moss); text-decoration: underline; text-underline-offset: 2px; }
+
+.summary {
+  background: var(--moss-soft);
+  border-left: 3px solid var(--moss);
+  padding: 18px 22px;
+  border-radius: 4px;
+  margin: 28px 0;
+}
+
+.summary p:first-child { margin-top: 0; }
+.summary p:last-child { margin-bottom: 0; }
+
+.tablewrap { overflow-x: auto; margin: 20px 0; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px;
+  min-width: 460px;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--rule);
+}
+
+th { background: var(--moss-soft); font-weight: 600; }
+
+hr.section {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 56px 0 0;
+}
+
+footer.site {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+footer.site a { color: var(--ink-soft); }
+
+.faq { margin: 24px 0; }
+.faq h3 { margin-bottom: 4px; }
+.faq p { margin-top: 4px; }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1f1d;
+    --ink: #e6e6e0;
+    --ink-soft: #a3aaa5;
+    --moss: #9dbfa2;
+    --moss-soft: #262d29;
+    --rule: #343b37;
+  }
+}
