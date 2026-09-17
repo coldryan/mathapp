@@ -1,0 +1,14 @@
+The icons in this folder are adaptations of OpenMoji artwork.
+
+Original work: OpenMoji (https://openmoji.org)
+Original author: OpenMoji contributors
+Licence of the original: Creative Commons Attribution-ShareAlike 4.0 International
+
+These adaptations are likewise licensed under
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0).
+
+Full licence text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by-sa/4.0/
+
+Changes made to the originals are described in README.md and repeated as a
+comment at the top of every SVG file.
