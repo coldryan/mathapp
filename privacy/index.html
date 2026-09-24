@@ -68,7 +68,8 @@
 <ul>
   <li><strong>報告內容:</strong>小朋友嘅名、年級、當日題數、正確率、連續日數、最弱課題、當日最多 5 條錯題(連小朋友答咗咩同正確答案)、近 7 日對比。</li>
   <li><strong>條路點行:</strong>app → 我哋喺 Google Apps Script 上嘅一個小程式 → 用 Gmail 寄去你個 email。</li>
-  <li><strong>會唔會存起:</strong>唔會。個程式收到之後即刻寄信,唔會將你嘅 email 或者報告內容寫入任何資料庫。唯一嘅例外係一個防濫發嘅計數器,佢會喺記憶體暫存你個 email 最多 6 個鐘,之後自動消失。</li>
+  <li><strong>第一次要確認:</strong>第一次用某個 email,我哋會先寄一封確認信,你撳咗入面條連結先會開始寄報告或者重設碼。咁樣就冇人可以借 MathApp 寄嘢去唔屬於佢嘅信箱。</li>
+  <li><strong>會唔會存起:</strong>報告內容唔會存。個程式收到之後即刻寄信,唔會將你嘅 email 或者報告內容寫入任何資料庫。例外有兩個:①一個防濫發嘅計數器,會喺記憶體暫存你個 email 最多 6 個鐘,之後自動消失;②為咗記住「呢個 email 已經確認」,我哋會儲存由你個 email 計出嚟嘅一串加密指紋(HMAC)—— 淨係得我哋條密鑰先計得出,亦冇辦法由佢倒返轉變返你個 email。</li>
   <li><strong>唔想要:</strong>喺 app 入面清空個 email 欄位,即刻停,冇任何嘢殘留。</li>
   <li><strong>家長 PIN 重設碼:</strong>如果你喺 PIN 畫面撳「忘記 PIN?」揀「寄重設碼」,app 會經同一條路寄一個 6 位一次性重設碼去你填嗰個 email。信入面只有個重設碼,冇小朋友或者學習資料;個碼由 app 自己產生,我哋唔會儲存。唔撳就唔會寄。</li>
 </ul>
@@ -180,7 +181,8 @@
 <ul>
   <li><strong>Contents:</strong> child's name, grade, questions completed, accuracy, streak, weakest topic, up to 5 of the day's incorrect questions (with the child's answer and the correct one), and a 7-day comparison.</li>
   <li><strong>Path:</strong> app → a small program of ours on Google Apps Script → sent to your inbox via Gmail.</li>
-  <li><strong>Is it stored?</strong> No. The program sends the message and writes neither your address nor the report to any database. The one exception is an anti-abuse counter that holds your address in memory for at most 6 hours before it expires.</li>
+  <li><strong>Confirmation first:</strong> the first time an address is used, we send a confirmation email; reports and reset codes start only after you open its link. This stops anyone from using MathApp to send mail to an inbox that isn’t theirs.</li>
+  <li><strong>Is it stored?</strong> The report is not. The program sends the message and writes neither your address nor the report to any database, with two exceptions: (1) an anti-abuse counter holds your address in memory for at most 6 hours before it expires; (2) to remember that an address is confirmed, we keep a keyed cryptographic fingerprint (HMAC) derived from it — only our key can compute it, and the address cannot be recovered from it.</li>
   <li><strong>To stop:</strong> clear the email field in the app. It stops immediately, with nothing left behind.</li>
   <li><strong>Parent PIN reset code:</strong> if you tap “Forgot PIN?” on the PIN screen and choose to email a code, the app sends a one-time 6-digit reset code to the address you entered, by the same route. The email contains only the code — no child or learning data. The app generates the code itself and we do not store it. Nothing is sent unless you tap it.</li>
 </ul>
