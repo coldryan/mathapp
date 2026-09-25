@@ -1,33 +1,131 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-HK">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MathApp</title>
-<meta name="description" content="MathApp —— 香港小學數學練習 app(小一至小六)。私隱政策同支援。">
+<title>MathApp: Primary Maths</title>
+<meta name="description" content="Maths practice for Primary 1–6, built on the Hong Kong curriculum. Practise by topic, daily speed maths, parent reports, Chinese or English questions. Free, no ads.">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* 首頁專用;私隱 / 支援頁照用 style.css 原樣 */
+  /* 首頁自己嘅顏色 token;跟 style.css 一樣深色模式要換 */
+  :root { --card: #ffffff; --chip-ink: #3f5a45; --cta-bg: #2b322e; --cta-ink: #ffffff; }
+  @media (prefers-color-scheme: dark) { :root { --card: #232926; --chip-ink: #c5dcc9; --cta-bg: #e6e6e0; --cta-ink: #1b1f1d; } }
+  body.home { padding: 0 16px 72px; }
+  .home .wrap { max-width: 1040px; }
+
+  .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; padding: 56px 0 24px; }
+  .hero .app { font-size: 15px; letter-spacing: .06em; color: var(--moss); font-weight: 600; text-transform: uppercase; }
+  .hero h1 { font-size: 44px; line-height: 1.15; margin: 10px 0 16px; letter-spacing: -.01em; }
+  .hero p.lead { font-size: 19px; color: var(--ink-soft); margin: 0 0 24px; max-width: 34em; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; padding: 0; list-style: none; }
+  .facts li { font-size: 14px; background: var(--moss-soft); color: var(--chip-ink); padding: 4px 12px; border-radius: 999px; margin: 0; }
+  .cta { display: inline-block; background: var(--cta-bg); color: var(--cta-ink); padding: 12px 22px; border-radius: 12px; font-weight: 600; font-size: 16px; line-height: 1.4; }
+  .cta small { display: block; font-weight: 400; font-size: 12px; opacity: .75; }
+  .phone { justify-self: center; width: min(280px, 100%); border-radius: 34px; border: 8px solid #20261f; box-shadow: 0 24px 50px rgba(43,50,46,.18); overflow: hidden; background: #20261f; }
+  .phone img { display: block; width: 100%; height: auto; }
+
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 48px 0 16px; }
+  .feature { background: var(--card); border: 1px solid var(--rule); border-radius: 16px; padding: 20px 22px; }
+  .feature h3 { font-size: 17px; margin: 2px 0 6px; }
+  .feature p { font-size: 15px; line-height: 1.6; color: var(--ink-soft); margin: 0; }
+  .feature .tag { font-size: 12px; font-weight: 600; color: var(--moss); letter-spacing: .04em; text-transform: uppercase; }
+
+  .shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 40px 0 8px; }
+  .shots figure { margin: 0; }
+  .shots img { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--rule); display: block; }
+  .shots figcaption { font-size: 13px; color: var(--ink-soft); margin-top: 8px; text-align: center; }
+
+  .free { background: var(--moss-soft); border-radius: 20px; padding: 28px 32px; margin: 48px 0 0; }
+  .free h2 { margin: 0 0 8px; }
+  .free p { margin: 0; color: var(--chip-ink); }
+
+  .home footer.site { display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: space-between; }
+  .home footer.site nav a { margin-right: 14px; }
+
+  @media (max-width: 820px) {
+    .hero { grid-template-columns: 1fr; gap: 28px; padding-top: 36px; }
+    .hero h1 { font-size: 34px; }
+    .features { grid-template-columns: 1fr; }
+    .shots { grid-template-columns: repeat(2, 1fr); }
+    .free { padding: 22px; }
+  }
+</style>
 </head>
-<body>
+<body class="home">
 <div class="wrap">
-<header class="site">
-  <div class="app">MathApp</div>
-  <h1>香港小學數學練習<br><span style="font-size:22px;color:var(--ink-soft)">Maths practice for HK primary school</span></h1>
-  <p class="meta">小一至小六 · iPhone 同 iPad · 做題唔使上網<br>Primary 1–6 · iPhone and iPad · works offline</p>
-</header>
 
-<div class="summary">
-  <p>學習紀錄預設只留喺你部機。零廣告、零追蹤、冇第三方分析工具。</p>
-  <p>Learning records stay on your device by default. No ads, no tracking, no third-party analytics.</p>
-</div>
+<section class="hero">
+  <div>
+    <div class="app">MathApp</div>
+    <h1>Practise the right maths, not just more maths.</h1>
+    <p class="lead">Built on the Hong Kong primary maths curriculum, Primary 1 to 6. MathApp shows which topics your child hasn't got yet — and which were just careless slips.</p>
+    <ul class="facts">
+      <li>Primary 1–6</li>
+      <li>iPhone &amp; iPad</li>
+      <li>Works offline</li>
+      <li>Chinese · English · Both</li>
+      <li>Free · no ads</li>
+    </ul>
+    <span class="cta">Coming soon to the App Store<small>iOS 17 or later</small></span>
+  </div>
+  <div class="phone"><img src="img/S1_practice.jpg" alt="A practice question in MathApp" width="560" height="1216"></div>
+</section>
 
-<h2>頁面 · Pages</h2>
-<ul>
-  <li><a href="privacy/">私隱政策 · Privacy Policy</a></li>
-  <li><a href="support/">支援 · Support</a></li>
-  <li><a href="credits/openmoji/">OpenMoji 改編版圖示 · Adapted OpenMoji icons</a>（CC BY-SA 4.0）</li>
-</ul>
+<section class="features">
+  <div class="feature">
+    <div class="tag">Curriculum</div>
+    <h3>Every topic, P1 to P6</h3>
+    <p>From basic addition to percentages, speed and 3D shapes. Each question is written for one topic, never pulled at random.</p>
+  </div>
+  <div class="feature">
+    <div class="tag">Learning loop</div>
+    <h3>Hints, not answers</h3>
+    <p>A wrong answer brings a hint, not the solution. Mistakes come back later for review until they stick.</p>
+  </div>
+  <div class="feature">
+    <div class="tag">Diagrams</div>
+    <h3>Not just sums</h3>
+    <p>Shapes, charts, measurement and direction questions that need a picture — the kinds found in real school papers.</p>
+  </div>
+  <div class="feature">
+    <div class="tag">New</div>
+    <h3>Daily speed maths</h3>
+    <p>100 quick calculations a day, the same set for everyone in the grade. Scored on accuracy and speed against a target — no leaderboards.</p>
+  </div>
+  <div class="feature">
+    <div class="tag">Parents</div>
+    <h3>See the weak spots</h3>
+    <p>A PIN-protected parent area shows what your child did, which topics are weak and recent mistakes. Optional daily email.</p>
+  </div>
+  <div class="feature">
+    <div class="tag">Languages</div>
+    <h3>Chinese, English or both</h3>
+    <p>Set per child. One tap switches the current question to the other language.</p>
+  </div>
+</section>
 
-<footer class="site">MathApp · 最後更新 Last updated 2026-08-24</footer>
+<section class="shots" aria-label="Screenshots">
+  <figure><img src="img/S1_practice.jpg" alt="Practice screen" width="560" height="1216" loading="lazy"><figcaption>Practise by topic</figcaption></figure>
+  <figure><img src="img/S2_figure_chart.jpg" alt="Chart question" width="560" height="1216" loading="lazy"><figcaption>Diagram questions</figcaption></figure>
+  <figure><img src="img/S4_parent_report.jpg" alt="Parent report" width="560" height="1216" loading="lazy"><figcaption>Parent report</figcaption></figure>
+  <figure><img src="img/S5_bilingual.jpg" alt="Bilingual question" width="560" height="1216" loading="lazy"><figcaption>Bilingual questions</figcaption></figure>
+</section>
+
+<section class="free">
+  <h2>Everything is free</h2>
+  <p>Step-by-step solutions, redo mistakes, daily speed maths, parent reports and daily emails — all free. No ads, no in-app purchases, no account. Learning records stay on your device.</p>
+</section>
+
+<footer class="site">
+  <nav>
+    <a href="privacy/">Privacy · 私隱政策</a>
+    <a href="support/">Support · 支援</a>
+    <a href="credits/openmoji/">Credits</a>
+  </nav>
+  <span>© 2026 Wise Sage Creations</span>
+</footer>
+
 </div>
 </body>
 </html>
