@@ -13,7 +13,7 @@
 <header class="site">
   <div class="app">MathApp</div>
   <h1>私隱政策<br><span style="font-size:22px;color:var(--ink-soft)">Privacy Policy</span></h1>
-  <p class="meta">生效日期:2026 年 9 月 24 日 · 版本 1.3<br>Effective 24 September 2026 · Version 1.3</p>
+  <p class="meta">生效日期:2026 年 10 月 5 日 · 版本 1.4<br>Effective 5 October 2026 · Version 1.4</p>
   <nav class="lang"><a href="#en">English version below ↓</a> · <a href="../support/">支援 / Support</a></nav>
 </header>
 
@@ -29,7 +29,7 @@
 <p>以下資料只儲存喺你部裝置入面,唔會上傳去任何伺服器,我哋亦睇唔到:</p>
 <ul>
   <li>小朋友嘅名同年級(由家長自己輸入,可以用花名)</li>
-  <li>所有答題紀錄:做過邊題、答咗咩、啱定錯、用咗幾耐、用過幾多次提示、難度等級</li>
+  <li>所有答題紀錄:做過邊題、答咗咩、啱定錯、用咗幾耐、用過幾多次提示、難度等級(例外:如果家長開咗匿名診斷,題目編號同第一次答啱定錯會匿名傳出,見 3.1)</li>
   <li>手寫草稿圖(保留 3 日後自動刪走)</li>
   <li>家長設定同 4 位數字家長密碼(PIN)</li>
   <li>遊戲進度(寵物、領地等)</li>
@@ -48,12 +48,13 @@
     <td>
       • 一個隨機產生嘅安裝編號(UUID,同你嘅身分冇任何關係;刪 app 就永久消失)<br>
       • app 版本、iOS 版本、機種代號(例如 iPad13,1)<br>
-      • 事件紀錄:開機、閃退、死機、畫面卡頓、題庫載入失敗、題庫更新結果、完成一組題(組數同首次答對率)
+      • 事件紀錄:開機、閃退、死機、畫面卡頓、題庫載入失敗、題庫更新結果、完成一組題(組數同首次答對率)<br>
+      • 逐題統計:每條題嘅編號,同第一次作答係啱定錯(用嚟搵出出得唔好嘅題目;唔連住小朋友個名或者任何身分)
     </td>
     <td>
       • 小朋友個名<br>
       • 家長 email<br>
-      • 題目內容同答案本身<br>
+      • 題目內容,同小朋友填嘅答案本身<br>
       • IDFA / IDFV 或任何廣告識別碼<br>
       • 位置、通訊錄、相片、麥克風、相機(app 完全冇要求過呢啲權限)
     </td>
@@ -86,7 +87,7 @@
   <li><strong>零廣告、零第三方追蹤。</strong>我哋冇裝 Crashlytics、Sentry、Firebase、Google Analytics 或者任何同類 SDK。App 亦冇要求 App 追蹤透明度(ATT)權限,因為我哋根本冇追蹤。</li>
   <li><strong>小朋友介面冇外鏈、冇購買。</strong>所有設定、購買、報告、外部連結一律收喺 4 位數字家長密碼閘後面。</li>
   <li><strong>我哋唔會主動向小朋友收集任何個人資料。</strong>小朋友個名係家長自己輸入,而且只留喺部機(除非家長自己開咗每日報告,寄去家長自己個信箱)。</li>
-  <li>小朋友做題嘅內容同答案只留喺部機,除非家長自己開咗每日報告(報告會包括當日最多 5 條錯題同小朋友嘅答案,寄去家長自己個信箱,見 3.2)。</li>
+  <li>小朋友做題嘅內容同答案只留喺部機,除非家長自己開咗每日報告(報告會包括當日最多 5 條錯題同小朋友嘅答案,寄去家長自己個信箱,見 3.2)。另外,如果家長開咗匿名診斷,題目編號同首答啱錯會匿名傳出(見 3.1),但唔包括題目文字同小朋友嘅答案。</li>
 </ul>
 
 <h2>5. 我哋用到嘅第三方服務</h2>
@@ -129,7 +130,7 @@
 <hr class="section">
 
 <h1 id="en" style="font-size:26px;margin-top:56px">Privacy Policy (English)</h1>
-<p class="meta">Effective 24 September 2026 · Version 1.3. This English text is a translation of the Chinese version above; if the two ever differ, the Chinese version governs.</p>
+<p class="meta">Effective 5 October 2026 · Version 1.4. This English text is a translation of the Chinese version above; if the two ever differ, the Chinese version governs.</p>
 
 <div class="summary">
   <p><strong>In one line:</strong> MathApp is a maths practice app for children. All learning data stays <strong>on your device</strong> by default. We show <strong>no ads, do no tracking, embed no third-party analytics SDKs, and never sell your data</strong>. Only two things ever leave the device, and a parent controls both: <strong>(1) anonymous diagnostics</strong> (<strong>off by default</strong> — a parent must tap “I agree” to turn it on) and <strong>(2) the daily email progress report</strong> (off until a parent enters their own email address). The same parent email is also used to send a <strong>parent PIN reset code</strong>, but only when a parent taps “Forgot PIN?” (see 3.2).</p>
@@ -142,7 +143,7 @@
 <p>The following is stored only on your device. It is never uploaded, and we cannot see it:</p>
 <ul>
   <li>Your child's name and grade (entered by you; a nickname is fine)</li>
-  <li>All practice records: which questions, the answers given, right or wrong, time taken, hints used, difficulty level</li>
+  <li>All practice records: which questions, the answers given, right or wrong, time taken, hints used, difficulty level (exception: if a parent turns on anonymous diagnostics, question IDs and whether the first try was right or wrong are sent anonymously; see 3.1)</li>
   <li>Handwritten scratch images (automatically deleted after 3 days)</li>
   <li>Parent settings and the 4-digit parent PIN</li>
   <li>Game progress (pets, homestead, and so on)</li>
@@ -161,12 +162,13 @@
     <td>
       • A randomly generated install identifier (a UUID unrelated to your identity; gone for good when the app is deleted)<br>
       • App version, iOS version, device model code (e.g. iPad13,1)<br>
-      • Events: launch, crash, hang, UI stall, question-pack load failure, content-update result, group completed (count and first-attempt accuracy)
+      • Events: launch, crash, hang, UI stall, question-pack load failure, content-update result, group completed (count and first-attempt accuracy)<br>
+      • Per-question statistics: each question's ID and whether the first attempt was right or wrong (used to spot badly written questions; not linked to your child's name or identity)
     </td>
     <td>
       • Your child's name<br>
       • The parent email address<br>
-      • Question content or answers<br>
+      • Question content, or the answers your child typed<br>
       • IDFA / IDFV or any advertising identifier<br>
       • Location, contacts, photos, microphone, camera (the app never requests these permissions)
     </td>
@@ -198,7 +200,7 @@
   <li><strong>No ads and no third-party tracking.</strong> We embed no Crashlytics, Sentry, Firebase, Google Analytics or comparable SDK. The app never asks for App Tracking Transparency permission because there is nothing to track.</li>
   <li><strong>The child-facing interface has no outbound links and no purchases.</strong> Settings, purchases, reports and external links all sit behind the 4-digit parent gate.</li>
   <li><strong>We do not knowingly collect personal information from children.</strong> The child's name is entered by a parent and stays on the device, unless the parent has turned on the daily report that goes to the parent's own inbox.</li>
-  <li>The questions a child answers, and their answers, stay on the device, unless the parent has turned on the daily report (which includes up to 5 missed questions with the child's answers and goes to the parent's own inbox; see 3.2).</li>
+  <li>The questions a child answers, and their answers, stay on the device, unless the parent has turned on the daily report (which includes up to 5 missed questions with the child's answers and goes to the parent's own inbox; see 3.2). Separately, if a parent turns on anonymous diagnostics, question IDs and first-try right/wrong are sent anonymously (see 3.1), never the question text or the child's answers.</li>
 </ul>
 
 <h2>5. Third-party services we use</h2>
@@ -239,7 +241,7 @@
 <p>For privacy questions or to exercise any of the rights above, please email <a href="mailto:support@wisesagecreations.com">support@wisesagecreations.com</a> or reach us through the <a href="../support/">support page</a>.</p>
 
 <footer class="site">
-  MathApp · <a href="../support/">支援 / Support</a> · 最後更新 Last updated 2026-09-24
+  MathApp · <a href="../support/">支援 / Support</a> · 最後更新 Last updated 2026-10-05
 </footer>
 
 </div>
