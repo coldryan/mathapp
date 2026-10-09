@@ -6,6 +6,7 @@ App Store 上架必填嘅兩條 URL,行 GitHub Pages(免費、靜態、無後台
 |---|---|---|
 | 私隱政策 | `privacy/index.html` | https://coldryan.github.io/mathapp/privacy/ |
 | 支援 | `support/index.html` | https://coldryan.github.io/mathapp/support/ |
+| 確認 email | `confirm/index.html` | https://wisesagecreations.com/confirm/ —— 確認信條連結開呢頁,由呢頁 call Apps Script(`MAILER` 要同 app 入面條 `/exec` 一樣)。唔可以改路徑,寄咗出去嘅信靠佢。 |
 
 ## 點改
 

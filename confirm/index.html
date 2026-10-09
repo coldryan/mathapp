@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>確認 email · MathApp</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <div class="app">MathApp</div>
+  <h1>確認 email<br><span style="font-size:22px;color:var(--ink-soft)">Confirm your email</span></h1>
+</header>
+
+<div class="summary" id="status" aria-live="polite">
+  <p>確認緊,請等一陣……<br>Confirming, one moment…</p>
+</div>
+
+<p id="retry" hidden><a href="" id="retry-link">再試一次 / Try again</a></p>
+
+<noscript><p>呢頁要開 JavaScript 先用得。<br>This page needs JavaScript.</p></noscript>
+
+<footer class="site">
+  MathApp · <a href="../support/">支援 / Support</a> · <a href="../privacy/">私隱政策 / Privacy</a>
+</footer>
+
+</div>
+<script>
+// The mail link lands here instead of script.google.com: a browser signed in to
+// several Google accounts gets that address rewritten to /macros/u/1/ and fails.
+// This call carries no Google cookies, so Google never rewrites it.
+(function () {
+  var MAILER = 'https://script.google.com/macros/s/AKfycbwzOJoC-KMTF9MkT7vwi6amlmaHRb24yS2b2Gn6HNfs_cr4BJ8OiZNUfaaVvKUt_OCMAQ/exec';
+  var MSG = {
+    ok: '已確認 ✓ 可以閂咗呢頁。之後報告同重設碼會寄到呢個 email。<br>Email confirmed. You can close this page.',
+    bad: '呢條連結唔啱。請喺 email 入面再撳一次,或者喺 app 重新傳送。<br>This link is not valid. Open it again from the email, or resend from the app.',
+    fail: '暫時確認唔到,請檢查網絡再試。<br>Could not confirm right now. Check your connection and try again.'
+  };
+  var box = document.getElementById('status');
+  function show(key) {
+    box.innerHTML = '<p>' + MSG[key] + '</p>';
+    if (key === 'fail') {
+      document.getElementById('retry').hidden = false;
+      document.getElementById('retry-link').onclick = function () { location.reload(); return false; };
+    }
+  }
+  window.addEventListener('hashchange', function () { location.reload(); });
+  var q = new URLSearchParams(location.hash.slice(1) || location.search.slice(1));
+  var e = q.get('e'), t = q.get('t');
+  if (!e || !t) return show('bad');
+  fetch(MAILER + '?f=txt&e=' + encodeURIComponent(e) + '&t=' + encodeURIComponent(t), { credentials: 'omit' })
+    .then(function (r) { return r.text(); })
+    .then(function (text) { show(text === 'ok' ? 'ok' : text === 'err: bad-link' ? 'bad' : 'fail'); })
+    .catch(function () { show('fail'); });
+})();
+</script>
+</body>
+</html>
