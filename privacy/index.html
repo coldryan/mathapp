@@ -65,6 +65,7 @@
 <p>呢啲紀錄經 Google Apps Script 傳去我哋自己嘅一個 Google Sheet,只用嚟修 bug 同改善 app,唔會用嚟做廣告、唔會同任何人分享。</p>
 
 <h3>3.2 每日 email 學習報告(預設關,家長自己開)</h3>
+<p><em>現行版本(1.0)未提供每日 email 學習報告;以下內容只適用於提供呢項功能嘅版本。現行版本入面,家長 email 只會用嚟寄家長 PIN 重設碼。</em></p>
 <p>家長可以喺「家長端 → 帳戶 → 每日 email 報告」填自己嘅 email。新版定時報告會喺小朋友裝置時區約晚上 9 點，將已同步摘要寄去<strong>你自己填嗰個信箱</strong>，每位小朋友一封。需要裝置先上網同步；信內顯示紀錄截止及最後同步時間。未同步唔代表冇練習。</p>
 <ul>
   <li><strong>報告內容:</strong>新版包括小朋友嘅名、年級、按課題及難度分開嘅練習／重溫首答表現、提示使用題數、改正及累積未改正題數，以及當日速算正式分數、答啱題數同用時。新版唔上傳逐題答案。舊版即時報告仍可能包括最多 5 條錯題同答案。</li>
@@ -79,6 +80,7 @@
 <p>App 會不時去 Cloudflare 嘅檔案儲存服務下載更新版題庫。呢個係一般網頁下載,同下載一個檔案冇分別 —— 唔會傳出任何關於你或小朋友嘅資料。同所有上網行為一樣,對方伺服器會喺技術紀錄見到你嘅 IP 地址。</p>
 
 <h3>3.4 訂閱同付款</h3>
+<p><em>現行版本(1.0)冇任何訂閱或者 App 內購買;以下內容只適用於日後提供付費功能嘅版本。</em></p>
 <p>如果你訂閱付費功能,交易<strong>完全由 Apple 嘅 App 內購買處理</strong>。我哋<strong>永遠見唔到</strong>你嘅信用卡號碼、Apple ID 或者付款資料。我哋只會由 Apple 收到一個「呢部裝置有冇有效訂閱」嘅結果,用嚟解鎖功能。</p>
 
 <h2>4. 兒童私隱</h2>
@@ -112,7 +114,7 @@
 <ul>
   <li><strong>停止匿名診斷:</strong>家長端 → 帳戶 → 匿名診斷 → 關(如果你之前開過)。連本機未傳嘅紀錄都會即刻清走。</li>
   <li><strong>停止 email 報告:</strong>清空 email 欄位。</li>
-  <li><strong>刪除一個小朋友嘅全部資料:</strong>家長端 → 帳戶 → 刪除該檔案。會永久剷走佢嘅答題資料庫、遊戲存檔、設定同草稿。</li>
+  <li><strong>刪除一個小朋友嘅全部資料:</strong>家長端 → 帳戶 → 刪除該檔案。如果部機只得一個檔案,請刪除 MathApp(見下一項)。會永久剷走佢嘅答題資料庫、遊戲存檔、設定同草稿。</li>
   <li><strong>刪除全部資料:</strong>喺裝置上刪除 MathApp。</li>
   <li><strong>查閱資料:</strong>你隨時喺「家長端 → 答題明細」睇齊所有紀錄,亦可以匯出一份文字檔帶走。</li>
   <li>已經傳出咗嘅匿名診斷紀錄入面冇姓名、冇 email,所以我哋冇辦法喺入面認返邊條係你嘅。</li>
@@ -179,6 +181,7 @@
 <p>These records travel via Google Apps Script into a Google Sheet that we control. They are used only to fix bugs and improve the app, never for advertising, and are not shared.</p>
 
 <h3>3.2 Daily email progress report (off by default; parent opt-in)</h3>
+<p><em>The current version (1.0) does not offer the daily email report; this section applies only to versions that do. In the current version the parent email is used only to send the parent PIN reset code.</em></p>
 <p>A parent may enter their own email address under Parent area → Account → Daily email report. With scheduled reports, synced summaries are emailed <strong>to that address only</strong> around 9 pm in the child's device time zone, one per child. The device must first sync online. Each report shows its cutoff and last sync time; missing synced data does not mean no practice.</p>
 <ul>
   <li><strong>Contents:</strong> The scheduled version includes the child's name, grade, practice and review first-try results by topic and level, counts of first attempts using hints, corrected and outstanding mistake counts, and the daily official speed-maths score, correct count and duration. Individual answers are not uploaded by this version. Older immediate reports may still contain up to 5 missed questions and answers.</li>
@@ -193,6 +196,7 @@
 <p>The app occasionally downloads updated question packs from Cloudflare file storage. This is an ordinary file download and carries no information about you or your child. As with any web request, the serving host sees your IP address in its technical logs.</p>
 
 <h3>3.4 Subscriptions and payment</h3>
+<p><em>The current version (1.0) has no subscriptions or in-app purchases; this section applies only to future versions that offer paid features.</em></p>
 <p>If you subscribe, the transaction is handled <strong>entirely by Apple's In-App Purchase system</strong>. We <strong>never</strong> see your card number, Apple ID or payment details. All we receive from Apple is whether the device holds a valid subscription, which is what unlocks the paid features.</p>
 
 <h2>4. Children's privacy</h2>
@@ -225,7 +229,7 @@
 <ul>
   <li><strong>Stop diagnostics:</strong> Parent area → Account → Anonymous diagnostics → off (if you turned it on). Queued local records are wiped immediately.</li>
   <li><strong>Stop email reports:</strong> clear the email field.</li>
-  <li><strong>Delete one child's data:</strong> Parent area → Account → delete that profile. Their practice database, game save, settings and scratch images are permanently removed.</li>
+  <li><strong>Delete one child's data:</strong> Parent area → Account → delete that profile. If the device has only one profile, delete MathApp instead (see the next item). Their practice database, game save, settings and scratch images are permanently removed.</li>
   <li><strong>Delete everything:</strong> delete MathApp from the device.</li>
   <li><strong>Access your data:</strong> everything is visible under Parent area → Practice details, and can be exported as a text file.</li>
   <li>Diagnostics already sent contain no name or email, so we cannot single out your records from them.</li>
