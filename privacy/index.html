@@ -13,7 +13,7 @@
 <header class="site">
   <div class="app">MathApp</div>
   <h1>私隱政策<br><span style="font-size:22px;color:var(--ink-soft)">Privacy Policy</span></h1>
-  <p class="meta">生效日期:2026 年 10 月 5 日 · 版本 1.4<br>Effective 5 October 2026 · Version 1.4</p>
+  <p class="meta">生效日期:2026 年 10 月 9 日 · 版本 1.5<br>Effective 9 October 2026 · Version 1.5</p>
   <nav class="lang"><a href="#en">English version below ↓</a> · <a href="../support/">支援 / Support</a></nav>
 </header>
 
@@ -46,10 +46,10 @@
   <tr><th style="width:32%">會傳</th><th>唔會傳</th></tr>
   <tr>
     <td>
-      • 一個隨機產生嘅安裝編號(UUID,同你嘅身分冇任何關係;刪 app 就永久消失)<br>
+      • 一個隨機產生嘅安裝編號(UUID,入面冇姓名、冇 email;但同一部裝置傳出嘅紀錄都帶住同一個編號,所以我哋可以將佢哋歸埋一齊 —— 因此 Apple 私隱標籤將診斷資料列為「已連結」;刪 app 就永久消失)<br>
       • app 版本、iOS 版本、機種代號(例如 iPad13,1)<br>
       • 事件紀錄:開機、閃退、死機、畫面卡頓、題庫載入失敗、題庫更新結果、完成一組題(組數同首次答對率)<br>
-      • 逐題統計:每條題嘅編號,同第一次作答係啱定錯(用嚟搵出出得唔好嘅題目;唔連住小朋友個名或者任何身分)
+      • 逐題統計:每條題嘅編號,同第一次作答係啱定錯(用嚟搵出出得唔好嘅題目;唔包小朋友個名或 email)
     </td>
     <td>
       • 小朋友個名<br>
@@ -87,7 +87,7 @@
   <li><strong>零廣告、零第三方追蹤。</strong>我哋冇裝 Crashlytics、Sentry、Firebase、Google Analytics 或者任何同類 SDK。App 亦冇要求 App 追蹤透明度(ATT)權限,因為我哋根本冇追蹤。</li>
   <li><strong>小朋友介面冇外鏈、冇購買。</strong>所有設定、購買、報告、外部連結一律收喺 4 位數字家長密碼閘後面。</li>
   <li><strong>我哋唔會主動向小朋友收集任何個人資料。</strong>小朋友個名係家長自己輸入,而且只留喺部機(除非家長自己開咗每日報告,寄去家長自己個信箱)。</li>
-  <li>小朋友做題嘅內容同答案只留喺部機,除非家長自己開咗每日報告(報告會包括當日最多 5 條錯題同小朋友嘅答案,寄去家長自己個信箱,見 3.2)。另外,如果家長開咗匿名診斷,題目編號同首答啱錯會匿名傳出(見 3.1),但唔包括題目文字同小朋友嘅答案。</li>
+  <li>小朋友做題嘅內容同答案只留喺部機,除非家長自己開咗每日報告(寄去家長自己個信箱;新版定時報告只有學習摘要,唔上傳逐題答案,舊版即時報告仍可能包括最多 5 條錯題同答案,見 3.2)。另外,如果家長開咗匿名診斷,題目編號同首答啱錯會匿名傳出(見 3.1),但唔包括題目文字同小朋友嘅答案。</li>
 </ul>
 
 <h2>5. 我哋用到嘅第三方服務</h2>
@@ -95,7 +95,7 @@
 <table>
   <tr><th style="width:26%">服務</th><th style="width:37%">用嚟做乜</th><th>收到咩</th></tr>
   <tr><td>Apple</td><td>App Store 下載、App 內購買、系統層閃退報告(MetricKit)</td><td>付款同帳戶資料由 Apple 直接處理,我哋接觸唔到</td></tr>
-  <tr><td>Google(Apps Script / Gmail / Sheets)</td><td>寄每日報告 · 儲匿名診斷紀錄</td><td>你填嘅家長 email(只為寄信,唔儲存)· 匿名診斷紀錄</td></tr>
+  <tr><td>Google(Apps Script / Gmail / Sheets)</td><td>寄每日報告 · 儲匿名診斷紀錄</td><td>你填嘅家長 email 同學習摘要(為寄信而暫存,最長 8 日,見 3.2)· 匿名診斷紀錄</td></tr>
   <tr><td>Cloudflare</td><td>擺放題庫更新檔案</td><td>一般下載請求(含 IP 地址),冇個人資料</td></tr>
 </table>
 </div>
@@ -105,7 +105,7 @@
 <ul>
   <li><strong>部機上嘅資料:</strong>由你決定 —— 一直留到你刪除小朋友檔案或者刪走 app 為止。手寫草稿圖係例外,3 日後自動刪。</li>
   <li><strong>匿名診斷紀錄:</strong>最多保留 12 個月,之後清走。</li>
-  <li><strong>每日報告:</strong>唔保留(見 3.2)。寄出咗嘅信件之後就住喺你自己個信箱,由你話事。</li>
+  <li><strong>每日報告:</strong>待寄摘要寄出後移除,未寄出最長保留 8 日;防重複寄送嘅 HMAC 指紋及狀態保留 35 日,唔包含報告正文(見 3.2)。寄出咗嘅信件之後就住喺你自己個信箱,由你話事。</li>
 </ul>
 
 <h2>7. 家長有咩控制權</h2>
@@ -115,7 +115,7 @@
   <li><strong>刪除一個小朋友嘅全部資料:</strong>家長端 → 帳戶 → 刪除該檔案。會永久剷走佢嘅答題資料庫、遊戲存檔、設定同草稿。</li>
   <li><strong>刪除全部資料:</strong>喺裝置上刪除 MathApp。</li>
   <li><strong>查閱資料:</strong>你隨時喺「家長端 → 答題明細」睇齊所有紀錄,亦可以匯出一份文字檔帶走。</li>
-  <li>已經傳出咗嘅匿名診斷紀錄入面冇任何識別到你或小朋友嘅資料,所以我哋冇辦法(亦冇必要)喺入面認返邊條係你嘅。</li>
+  <li>已經傳出咗嘅匿名診斷紀錄入面冇姓名、冇 email,所以我哋冇辦法喺入面認返邊條係你嘅。</li>
 </ul>
 
 <h2>8. 資料安全</h2>
@@ -130,7 +130,7 @@
 <hr class="section">
 
 <h1 id="en" style="font-size:26px;margin-top:56px">Privacy Policy (English)</h1>
-<p class="meta">Effective 5 October 2026 · Version 1.4. This English text is a translation of the Chinese version above; if the two ever differ, the Chinese version governs.</p>
+<p class="meta">Effective 9 October 2026 · Version 1.5. This English text is a translation of the Chinese version above; if the two ever differ, the Chinese version governs.</p>
 
 <div class="summary">
   <p><strong>In one line:</strong> MathApp is a maths practice app for children. All learning data stays <strong>on your device</strong> by default. We show <strong>no ads, do no tracking, embed no third-party analytics SDKs, and never sell your data</strong>. Only two things ever leave the device, and a parent controls both: <strong>(1) anonymous diagnostics</strong> (<strong>off by default</strong> — a parent must tap “I agree” to turn it on) and <strong>(2) the daily email progress report</strong> (off until a parent enters their own email address). The same parent email is also used to send a <strong>parent PIN reset code</strong>, but only when a parent taps “Forgot PIN?” (see 3.2).</p>
@@ -160,10 +160,10 @@
   <tr><th style="width:32%">Sent</th><th>Never sent</th></tr>
   <tr>
     <td>
-      • A randomly generated install identifier (a UUID unrelated to your identity; gone for good when the app is deleted)<br>
+      • A randomly generated install identifier (a UUID that contains no name or email; records from the same device carry the same identifier, so we can group them together — which is why Apple’s privacy label lists diagnostics as “linked”; gone for good when the app is deleted)<br>
       • App version, iOS version, device model code (e.g. iPad13,1)<br>
       • Events: launch, crash, hang, UI stall, question-pack load failure, content-update result, group completed (count and first-attempt accuracy)<br>
-      • Per-question statistics: each question's ID and whether the first attempt was right or wrong (used to spot badly written questions; not linked to your child's name or identity)
+      • Per-question statistics: each question's ID and whether the first attempt was right or wrong (used to spot badly written questions; does not include your child's name or email)
     </td>
     <td>
       • Your child's name<br>
@@ -200,7 +200,7 @@
   <li><strong>No ads and no third-party tracking.</strong> We embed no Crashlytics, Sentry, Firebase, Google Analytics or comparable SDK. The app never asks for App Tracking Transparency permission because there is nothing to track.</li>
   <li><strong>The child-facing interface has no outbound links and no purchases.</strong> Settings, purchases, reports and external links all sit behind the 4-digit parent gate.</li>
   <li><strong>We do not knowingly collect personal information from children.</strong> The child's name is entered by a parent and stays on the device, unless the parent has turned on the daily report that goes to the parent's own inbox.</li>
-  <li>The questions a child answers, and their answers, stay on the device, unless the parent has turned on the daily report (which includes up to 5 missed questions with the child's answers and goes to the parent's own inbox; see 3.2). Separately, if a parent turns on anonymous diagnostics, question IDs and first-try right/wrong are sent anonymously (see 3.1), never the question text or the child's answers.</li>
+  <li>The questions a child answers, and their answers, stay on the device, unless the parent has turned on the daily report (which goes to the parent's own inbox; the scheduled version carries a learning summary only and uploads no individual answers, while older immediate reports may still contain up to 5 missed questions and answers; see 3.2). Separately, if a parent turns on anonymous diagnostics, question IDs and first-try right/wrong are sent anonymously (see 3.1), never the question text or the child's answers.</li>
 </ul>
 
 <h2>5. Third-party services we use</h2>
@@ -208,7 +208,7 @@
 <table>
   <tr><th style="width:26%">Service</th><th style="width:37%">Used for</th><th>What it receives</th></tr>
   <tr><td>Apple</td><td>App Store distribution, In-App Purchase, system-level crash diagnostics (MetricKit)</td><td>Payment and account data are handled by Apple directly; we have no access to them</td></tr>
-  <tr><td>Google (Apps Script / Gmail / Sheets)</td><td>Sending the daily report · storing anonymous diagnostics</td><td>The parent email you entered (to send the message; not stored) · anonymous diagnostic records</td></tr>
+  <tr><td>Google (Apps Script / Gmail / Sheets)</td><td>Sending the daily report · storing anonymous diagnostics</td><td>The parent email you entered and the learning summary (stored temporarily to send the message, for at most 8 days; see 3.2) · anonymous diagnostic records</td></tr>
   <tr><td>Cloudflare</td><td>Hosting question-pack update files</td><td>Ordinary download requests including IP address; no personal data</td></tr>
 </table>
 </div>
@@ -218,7 +218,7 @@
 <ul>
   <li><strong>On-device data:</strong> for as long as you keep it — until you delete the profile or the app. Handwritten scratch images are the exception and are deleted after 3 days.</li>
   <li><strong>Anonymous diagnostics:</strong> retained for at most 12 months, then deleted.</li>
-  <li><strong>Daily reports:</strong> not retained by us (see 3.2). Once sent, the message lives in your own mailbox under your control.</li>
+  <li><strong>Daily reports:</strong> queued summaries are removed after delivery, or after at most 8 days if undelivered; HMAC delivery fingerprints and status are kept for 35 days without the report text (see 3.2). Once sent, the message lives in your own mailbox under your control.</li>
 </ul>
 
 <h2>7. Parental controls</h2>
@@ -228,7 +228,7 @@
   <li><strong>Delete one child's data:</strong> Parent area → Account → delete that profile. Their practice database, game save, settings and scratch images are permanently removed.</li>
   <li><strong>Delete everything:</strong> delete MathApp from the device.</li>
   <li><strong>Access your data:</strong> everything is visible under Parent area → Practice details, and can be exported as a text file.</li>
-  <li>Diagnostics already sent contain nothing that identifies you or your child, so we have no way (and no need) to single your records out from them.</li>
+  <li>Diagnostics already sent contain no name or email, so we cannot single out your records from them.</li>
 </ul>
 
 <h2>8. Security</h2>
@@ -241,7 +241,7 @@
 <p>For privacy questions or to exercise any of the rights above, please email <a href="mailto:support@wisesagecreations.com">support@wisesagecreations.com</a> or reach us through the <a href="../support/">support page</a>.</p>
 
 <footer class="site">
-  MathApp · <a href="../support/">支援 / Support</a> · 最後更新 Last updated 2026-10-05
+  MathApp · <a href="../support/">支援 / Support</a> · 最後更新 Last updated 2026-10-09
 </footer>
 
 </div>
