@@ -13,7 +13,7 @@
 <header class="site">
   <div class="app">MathApp</div>
   <h1>私隱政策<br><span style="font-size:22px;color:var(--ink-soft)">Privacy Policy</span></h1>
-  <p class="meta">生效日期:2026 年 10 月 9 日 · 版本 1.5<br>Effective 9 October 2026 · Version 1.5</p>
+  <p class="meta">生效日期:2026 年 10 月 14 日 · 版本 1.6<br>Effective 14 October 2026 · Version 1.6</p>
   <nav class="lang"><a href="#en">English version below ↓</a> · <a href="../support/">支援 / Support</a></nav>
 </header>
 
@@ -26,10 +26,10 @@
 <p>如果你對本政策有任何疑問,請經<a href="../support/">支援頁</a>聯絡我哋。</p>
 
 <h2>2. 留喺部機、唔會離開嘅資料</h2>
-<p>以下資料只儲存喺你部裝置入面,唔會上傳去任何伺服器,我哋亦睇唔到:</p>
+<p>以下資料儲存喺你部裝置入面。現行版本(1.0)唔會將佢哋上傳去任何伺服器,我哋亦睇唔到;例外只有下面括號講明嘅情況(3.1 匿名診斷,同埋提供每日 email 報告嘅版本,見 3.2):</p>
 <ul>
-  <li>小朋友嘅名同年級(由家長自己輸入,可以用花名)</li>
-  <li>所有答題紀錄:做過邊題、答咗咩、啱定錯、用咗幾耐、用過幾多次提示、難度等級(例外:如果家長開咗匿名診斷,題目編號同第一次答啱定錯會匿名傳出,見 3.1)</li>
+  <li>小朋友嘅名同年級(由家長自己輸入,可以用花名。例外:提供每日 email 報告嘅版本,如果家長開咗報告,名同年級會隨報告經 Google 暫存同寄去家長信箱,見 3.2)</li>
+  <li>所有答題紀錄:做過邊題、答咗咩、啱定錯、用咗幾耐、用過幾多次提示、難度等級(例外:如果家長開咗匿名診斷,題目編號同第一次答啱定錯會匿名傳出,見 3.1;提供每日 email 報告嘅版本,如果家長開咗報告,當日學習摘要會隨報告傳出,見 3.2)</li>
   <li>手寫草稿圖(保留 3 日後自動刪走)</li>
   <li>家長設定同 4 位數字家長密碼(PIN)</li>
   <li>遊戲進度(寵物、領地等)</li>
@@ -97,7 +97,7 @@
 <table>
   <tr><th style="width:26%">服務</th><th style="width:37%">用嚟做乜</th><th>收到咩</th></tr>
   <tr><td>Apple</td><td>App Store 下載、App 內購買、系統層閃退報告(MetricKit)</td><td>付款同帳戶資料由 Apple 直接處理,我哋接觸唔到</td></tr>
-  <tr><td>Google(Apps Script / Gmail / Sheets)</td><td>寄每日報告 · 儲匿名診斷紀錄</td><td>你填嘅家長 email 同學習摘要(為寄信而暫存,最長 8 日,見 3.2)· 匿名診斷紀錄</td></tr>
+  <tr><td>Google(Apps Script / Gmail / Sheets)</td><td>寄家長 PIN 重設碼同 email 確認信 · 寄每日報告(只限提供呢項功能嘅版本)· 儲匿名診斷紀錄</td><td>你填嘅家長 email(用嚟寄信;唔會另外存一份地址清單,詳情見 6)· 提供每日報告嘅版本:小朋友名、年級同學習摘要(為寄信而暫存,最長 8 日,見 3.2)· 匿名診斷紀錄</td></tr>
   <tr><td>Cloudflare</td><td>擺放題庫更新檔案</td><td>一般下載請求(含 IP 地址),冇個人資料</td></tr>
 </table>
 </div>
@@ -107,7 +107,8 @@
 <ul>
   <li><strong>部機上嘅資料:</strong>由你決定 —— 一直留到你刪除小朋友檔案或者刪走 app 為止。手寫草稿圖係例外,3 日後自動刪。</li>
   <li><strong>匿名診斷紀錄:</strong>最多保留 12 個月,之後清走。</li>
-  <li><strong>每日報告:</strong>待寄摘要寄出後移除,未寄出最長保留 8 日;防重複寄送嘅 HMAC 指紋及狀態保留 35 日,唔包含報告正文(見 3.2)。寄出咗嘅信件之後就住喺你自己個信箱,由你話事。</li>
+  <li><strong>家長 email:</strong>寄 PIN 重設碼或者確認信嗰陣用,唔會另外存一份地址清單。防濫發計數器會暫存 email 最多 6 個鐘;已確認嘅地址只保留一個 HMAC 指紋(由 email 計出嚟嘅亂碼,倒推唔返個 email),用嚟記住「呢個地址確認咗」。寄出咗嘅信可能留喺我哋寄件信箱同你嘅收件信箱。想刪,可經支援頁聯絡我哋。</li>
+  <li><strong>每日報告(只限提供呢項功能嘅版本;現行版本 1.0 冇):</strong>待寄摘要(包括小朋友名同年級)寄出後移除,未寄出最長保留 8 日;防重複寄送嘅 HMAC 指紋及狀態保留 35 日,唔包含報告正文(見 3.2)。寄出咗嘅信件之後就住喺你自己個信箱,由你話事。</li>
 </ul>
 
 <h2>7. 家長有咩控制權</h2>
@@ -132,7 +133,7 @@
 <hr class="section">
 
 <h1 id="en" style="font-size:26px;margin-top:56px">Privacy Policy (English)</h1>
-<p class="meta">Effective 9 October 2026 · Version 1.5. This English text is a translation of the Chinese version above; if the two ever differ, the Chinese version governs.</p>
+<p class="meta">Effective 14 October 2026 · Version 1.6. This English text is a translation of the Chinese version above; if the two ever differ, the Chinese version governs.</p>
 
 <div class="summary">
   <p><strong>In one line:</strong> MathApp is a maths practice app for children. All learning data stays <strong>on your device</strong> by default. We show <strong>no ads, do no tracking, embed no third-party analytics SDKs, and never sell your data</strong>. Only two things ever leave the device, and a parent controls both: <strong>(1) anonymous diagnostics</strong> (<strong>off by default</strong> — a parent must tap “I agree” to turn it on) and <strong>(2) the daily email progress report</strong> (off until a parent enters their own email address). The same parent email is also used to send a <strong>parent PIN reset code</strong>, but only when a parent taps “Forgot PIN?” (see 3.2).</p>
@@ -142,10 +143,10 @@
 <p>MathApp is built and operated by an independent developer. It is a maths practice app for the Hong Kong primary curriculum (Primary 1–6), running on iPhone and iPad. This policy explains how we handle your and your child's information. Questions? Reach us through the <a href="../support/">support page</a>.</p>
 
 <h2>2. Data that stays on the device</h2>
-<p>The following is stored only on your device. It is never uploaded, and we cannot see it:</p>
+<p>The following is stored on your device. The current version (1.0) never uploads it to any server, and we cannot see it; the only exceptions are the ones noted in brackets below (anonymous diagnostics in 3.1, and versions that offer the daily email report, see 3.2):</p>
 <ul>
-  <li>Your child's name and grade (entered by you; a nickname is fine)</li>
-  <li>All practice records: which questions, the answers given, right or wrong, time taken, hints used, difficulty level (exception: if a parent turns on anonymous diagnostics, question IDs and whether the first try was right or wrong are sent anonymously; see 3.1)</li>
+  <li>Your child's name and grade (entered by you; a nickname is fine. Exception: in versions that offer the daily email report, if a parent turns it on, the name and grade travel with the report, are held temporarily by Google and are sent to the parent's inbox; see 3.2)</li>
+  <li>All practice records: which questions, the answers given, right or wrong, time taken, hints used, difficulty level (exception: if a parent turns on anonymous diagnostics, question IDs and whether the first try was right or wrong are sent anonymously, see 3.1; in versions that offer the daily email report, if a parent turns it on, the day's learning summary is sent with the report, see 3.2)</li>
   <li>Handwritten scratch images (automatically deleted after 3 days)</li>
   <li>Parent settings and the 4-digit parent PIN</li>
   <li>Game progress (pets, homestead, and so on)</li>
@@ -212,7 +213,7 @@
 <table>
   <tr><th style="width:26%">Service</th><th style="width:37%">Used for</th><th>What it receives</th></tr>
   <tr><td>Apple</td><td>App Store distribution, In-App Purchase, system-level crash diagnostics (MetricKit)</td><td>Payment and account data are handled by Apple directly; we have no access to them</td></tr>
-  <tr><td>Google (Apps Script / Gmail / Sheets)</td><td>Sending the daily report · storing anonymous diagnostics</td><td>The parent email you entered and the learning summary (stored temporarily to send the message, for at most 8 days; see 3.2) · anonymous diagnostic records</td></tr>
+  <tr><td>Google (Apps Script / Gmail / Sheets)</td><td>Sending parent PIN reset codes and email confirmations · sending the daily report (only in versions that offer it) · storing anonymous diagnostics</td><td>The parent email you entered (used to send the message; we keep no separate list of addresses, see 6) · in versions with the daily report: the child's name, grade and learning summary (stored temporarily to send the message, for at most 8 days; see 3.2) · anonymous diagnostic records</td></tr>
   <tr><td>Cloudflare</td><td>Hosting question-pack update files</td><td>Ordinary download requests including IP address; no personal data</td></tr>
 </table>
 </div>
@@ -222,7 +223,8 @@
 <ul>
   <li><strong>On-device data:</strong> for as long as you keep it — until you delete the profile or the app. Handwritten scratch images are the exception and are deleted after 3 days.</li>
   <li><strong>Anonymous diagnostics:</strong> retained for at most 12 months, then deleted.</li>
-  <li><strong>Daily reports:</strong> queued summaries are removed after delivery, or after at most 8 days if undelivered; HMAC delivery fingerprints and status are kept for 35 days without the report text (see 3.2). Once sent, the message lives in your own mailbox under your control.</li>
+  <li><strong>Parent email:</strong> used when sending a PIN reset code or a confirmation email; we keep no separate list of addresses. An anti-abuse counter holds the address for up to 6 hours. For a confirmed address we keep only an HMAC fingerprint (a scrambled code computed from the address that cannot be turned back into it) to remember that it was confirmed. Sent messages may remain in our sending mailbox and in your inbox. To have them deleted, contact us through the support page.</li>
+  <li><strong>Daily reports (only in versions that offer them; the current version 1.0 does not):</strong> queued summaries, including the child's name and grade, are removed after delivery, or after at most 8 days if undelivered; HMAC delivery fingerprints and status are kept for 35 days without the report text (see 3.2). Once sent, the message lives in your own mailbox under your control.</li>
 </ul>
 
 <h2>7. Parental controls</h2>
@@ -245,7 +247,7 @@
 <p>For privacy questions or to exercise any of the rights above, please email <a href="mailto:support@wisesagecreations.com">support@wisesagecreations.com</a> or reach us through the <a href="../support/">support page</a>.</p>
 
 <footer class="site">
-  MathApp · <a href="../support/">支援 / Support</a> · 最後更新 Last updated 2026-10-09
+  MathApp · <a href="../support/">支援 / Support</a> · 最後更新 Last updated 2026-10-14
 </footer>
 
 </div>
